@@ -6,7 +6,7 @@
 /*   By: Leo <Leo@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 09:44:29 by Leo               #+#    #+#             */
-/*   Updated: 2021/12/01 10:53:19 by Leo              ###   ########lyon.fr   */
+/*   Updated: 2021/12/02 17:06:15 by Leo              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ int	ft_parse_printf(char *str, va_list args)
 				|| str[i] == 'd' || str[i] == 'i' || str[i] == 'u'
 				|| str[i] == 'x' || str[i] == '%')
 				nb_char += ft_args_sort(str[i], args);
+			else if (str[i])
+				nb_char += ft_putchar_args(str[i]);
 		}
+		else if (str[i] != '%')
+			nb_char += ft_putchar_args(str[i]);
+		i++;
 	}
+	return (nb_char);
 }
