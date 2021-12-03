@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Leo <Leo@student.42lyon.fr>                +#+  +:+       +#+        */
+/*   By: lbounor <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:53:20 by Leo               #+#    #+#             */
-/*   Updated: 2021/12/02 16:26:14 by Leo              ###   ########lyon.fr   */
+/*   Updated: 2021/12/03 08:21:05 by lbounor          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,5 @@ int		ft_putnbr_args(int n);
 int		ft_putnbr_unsigned_args(unsigned int n);
 int		ft_puthex_args(unsigned int n, int c);
 int		ft_percent_args(int c);
-
-char	*ft_strdup(const char *s1);
-char	*ft_itoa(int n);
-char	*ft_unsigned_itoa(unsigned int n);
 
 #endif

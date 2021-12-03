@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_args_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Leo <Leo@student.42lyon.fr>                +#+  +:+       +#+        */
+/*   By: lbounor <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 10:54:12 by Leo               #+#    #+#             */
-/*   Updated: 2021/12/02 16:17:42 by Leo              ###   ########lyon.fr   */
+/*   Updated: 2021/12/03 08:10:20 by lbounor          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ int	ft_args_sort(int c, va_list args)
 		nb_char += ft_puthex_args(va_arg(args, unsigned int), c);
 	if (c == '%')
 		nb_char += ft_percent_args(c);
+	return (nb_char);
 }

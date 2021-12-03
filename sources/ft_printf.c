@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Leo <Leo@student.42lyon.fr>                +#+  +:+       +#+        */
+/*   By: lbounor <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:53:33 by Leo               #+#    #+#             */
-/*   Updated: 2021/12/02 16:23:42 by Leo              ###   ########lyon.fr   */
+/*   Updated: 2021/12/03 08:19:52 by lbounor          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,17 @@ static char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-char	*ft_strdup(const char *s1)
+static size_t	ft_strlen(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+static char	*ft_strdup(const char *s1)
 {
 	char	*dup;
 
@@ -46,7 +56,7 @@ int	ft_printf(const char *str, ...)
 	i = 0;
 	strdup = ft_strdup(str);
 	if (!strdup)
-		return (NULL);
+		return (0);
 	va_start(args, str);
 	i = ft_parse_printf(strdup, args);
 	va_end(args);
