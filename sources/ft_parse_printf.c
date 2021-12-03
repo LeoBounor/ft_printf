@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_parse_printf.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Leo <Leo@student.42lyon.fr>                +#+  +:+       +#+        */
+/*   By: lbounor <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 09:44:29 by Leo               #+#    #+#             */
-/*   Updated: 2021/12/02 17:06:15 by Leo              ###   ########lyon.fr   */
+/*   Updated: 2021/12/03 13:34:47 by lbounor          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_parse_printf(char *str, va_list args)
 			i++;
 			if (str[i] == 'c' || str[i] == 's' || str[i] == 'p'
 				|| str[i] == 'd' || str[i] == 'i' || str[i] == 'u'
-				|| str[i] == 'x' || str[i] == '%')
+				|| str[i] == 'x' || str[i] == '%' || str[i] == 'X')
 				nb_char += ft_args_sort(str[i], args);
 			else if (str[i])
 				nb_char += ft_putchar_args(str[i]);
